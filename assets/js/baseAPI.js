@@ -10,7 +10,6 @@ $.ajaxPrefilter(function(options) {
         if (res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败！') {
             // 强制清空本地存储 
             localStorage.removeItem('token');
-            console.log(1);
             // 强制返回登录页
             location.href = 'login.html'
         }
